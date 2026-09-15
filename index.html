@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Markdown to HTML Converter</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Markdown to HTML Converter</h1>
+
+  <!-- Portfolio Header -->
+  <header class="portfolio-header">
+    <div class="brand">
+      <h1>DevPortfolio<span>.io</span></h1>
+      <p>Custom Markdown to HTML Converter</p>
+    </div>
   </header>
 
-  <main class="container">
-    <div class="panel">
-      <h2>Markdown Input</h2>
-      <textarea id="editor" placeholder="Type Markdown here..."></textarea>
+  <!-- Converter Main Area -->
+  <main class="converter-container">
+    
+    <!-- Input Section -->
+    <div class="card">
+      <div class="card-header">
+        <h2>Markdown Input</h2>
+      </div>
+      <!-- REQUIRED ID: markdown-input -->
+      <textarea id="markdown-input" placeholder="Type your Markdown here..."></textarea>
     </div>
 
-    <div class="panel">
-      <h2>HTML Output Preview</h2>
-      <div id="preview"></div>
+    <!-- Output Section -->
+    <div class="card">
+      <div class="card-header">
+        <h2>Live Preview & Output</h2>
+      </div>
+      
+      <!-- REQUIRED ID: preview -->
+      <div id="preview" class="preview-box"></div>
+      
+      <div class="raw-output-container">
+        <h3>Raw HTML String</h3>
+        <!-- REQUIRED ID: html-output -->
+        <pre><code id="html-output"></code></pre>
+      </div>
     </div>
+
   </main>
 
   <script src="script.js"></script>
